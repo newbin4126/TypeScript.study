@@ -168,19 +168,20 @@ class Dict {
   }
 }
 
+
 class Word {
   constructor(public term: string, public def: string) {}
 }
 
 const kimchi = new Word("kimchi", "한국의 음식");
 
-*/
 
 abstract class User {
   constructor(protected firstName: String, protected lastName: String) {}
   abstract sayHi(name: string): string;
   abstract fullName(): string;
 }
+
 class Player extends User {
   fullName() {
     return `${this.firstName} ${this.lastName}`;
@@ -188,4 +189,17 @@ class Player extends User {
   sayHi(name: string) {
     return `'Hello ${name}. My name is ${this.fullName}`;
   }
+}*/
+
+type PlayerA = {
+  name: string;
+};
+const playerA: PlayerA = {
+  name: "nico",
+};
+interface PlayerB {
+  name: string;
 }
+const playerB: PlayerB = {
+  name: "nico",
+};
